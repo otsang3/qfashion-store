@@ -13,7 +13,7 @@ MongoClient.connect('mongodb://localhost:27017')
   const db = client.db('qfashionDatabase')
   const storeCollection = db.collection('store')
   const storeRouter = createRouter(storeCollection)
-  app.use('/api/films', storeRouter)
+  app.use('/api/storeCollection', storeRouter)
 })
 
 app.listen(3000, function(){
