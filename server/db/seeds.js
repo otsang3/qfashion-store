@@ -3,63 +3,62 @@ db.dropDatabase();
 
 db.store.insertMany([
     {
-        men: [
-            {
-                jackets: [
-                    {
-                        id: 1,
-                        colour: "Navy",
-                        link: "https://www.asos.com/farah/farah-bective-soft-shell-jacket-in-navy/prd/21762294?colourwayid=60222299&SearchQuery=&cid=3606",
-                        name: "Farah Bective soft shell jacket",
-                        price: 100.00,
-                        size: ["S", "M", "L", "XL"]
-                    },
-                    {
-                        id: 2,
-                        colour: "Black",
-                        link: "https://www.asos.com/polo-ralph-lauren/polo-ralph-lauren-harrington-jacket-in-black/prd/5112387?colourwayid=15725122&SearchQuery=&cid=3606",
-                        name: "Ralph Lauren harrington jacket",
-                        price: 159.00,
-                        size: ["XS", "S", "M", "L"]
-                    },
-                    {
-                        id: 3,
-                        colour: "Khaki",
-                        link: "https://www.asos.com/rains/rains-hooded-jacket-in-mustard/prd/21060858?colourwayid=60137295&SearchQuery=&cid=3606",
-                        name: "Rains hooded jacket",
-                        price: 75.00,
-                        size: ["M", "L"]
-                    }
-                ],
-                shoes: [
-                    {
-                        id: 1,
-                        colour: "Beige",
-                        link: "https://www.asos.com/timberland/timberland-radford-6-inch-boots-in-wheat/prd/20580251?colourwayid=60065850&SearchQuery=&cid=4209",
-                        name: "Timberland Radford 6 Inch boots",
-                        price: 165.00,
-                        size: [7.5, 8, 8.5, 9, 9.5, 10]
-                    },
-                    {
-                        id: 2,
-                        colour: "Black",
-                        link: "https://www.asos.com/vans/vans-authentic-plimsolls-in-black/prd/12234373?colourwayid=16387120&SearchQuery=&cid=4209",
-                        name: "Vans Authentic plimsolls in black",
-                        price: 52.00,
-                        size: [6.5, 7, 7.5, 8, 8.5, 9]
-                    },
-                    {
-                        id: 3,
-                        colour: "White",
-                        link: "https://www.asos.com/puma/puma-ralph-sampson-lo-trainers-in-triple-white/prd/12557678?colourwayid=16397940&SearchQuery=&cid=4209",
-                        name: "Puma Ralph Sampson Lo trainers",
-                        price: 52.00,
-                        size: [6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11]
-                    }
-                ]
+        men: {
+            jackets: [
+                {
+                    id: 1,
+                    colour: "Navy",
+                    link: "https://www.asos.com/farah/farah-bective-soft-shell-jacket-in-navy/prd/21762294?colourwayid=60222299&SearchQuery=&cid=3606",
+                    name: "Farah Bective soft shell jacket",
+                    price: 100.00,
+                    size: ["S", "M", "L", "XL"]
+                },
+                {
+                    id: 2,
+                    colour: "Black",
+                    link: "https://www.asos.com/polo-ralph-lauren/polo-ralph-lauren-harrington-jacket-in-black/prd/5112387?colourwayid=15725122&SearchQuery=&cid=3606",
+                    name: "Ralph Lauren harrington jacket",
+                    price: 159.00,
+                    size: ["XS", "S", "M", "L"]
+                },
+                {
+                    id: 3,
+                    colour: "Khaki",
+                    link: "https://www.asos.com/rains/rains-hooded-jacket-in-mustard/prd/21060858?colourwayid=60137295&SearchQuery=&cid=3606",
+                    name: "Rains hooded jacket",
+                    price: 75.00,
+                    size: ["M", "L"]
+                }
+            ],
+            shoes: [
+                {
+                    id: 1,
+                    colour: "Beige",
+                    link: "https://www.asos.com/timberland/timberland-radford-6-inch-boots-in-wheat/prd/20580251?colourwayid=60065850&SearchQuery=&cid=4209",
+                    name: "Timberland Radford 6 Inch boots",
+                    price: 165.00,
+                    size: [7.5, 8, 8.5, 9, 9.5, 10]
+                },
+                {
+                    id: 2,
+                    colour: "Black",
+                    link: "https://www.asos.com/vans/vans-authentic-plimsolls-in-black/prd/12234373?colourwayid=16387120&SearchQuery=&cid=4209",
+                    name: "Vans Authentic plimsolls in black",
+                    price: 52.00,
+                    size: [6.5, 7, 7.5, 8, 8.5, 9]
+                },
+                {
+                    id: 3,
+                    colour: "White",
+                    link: "https://www.asos.com/puma/puma-ralph-sampson-lo-trainers-in-triple-white/prd/12557678?colourwayid=16397940&SearchQuery=&cid=4209",
+                    name: "Puma Ralph Sampson Lo trainers",
+                    price: 52.00,
+                    size: [6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11]
+                }
+            ]
             }
-        ],
-        women: [
+        ,
+        women: 
             {
                 jackets: [
                     {
@@ -114,6 +113,5 @@ db.store.insertMany([
                     }
                 ]
             }
-        ]
     }
 ])
