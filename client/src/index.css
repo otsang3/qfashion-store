@@ -12,8 +12,35 @@ code {
     monospace;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+}
+
 li {
   list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.front-page-container {
+  display: flex;
+  flex-direction: row;
+  margin: 2em 0em;
+}
+
+.front-page-row-1 {
+  width: 12.5em;
+}
+
+.front-page-row-2 {
+  height: 60em;
+  margin-left: 7.5em;
+  text-align: center;
+  width: 50em;
 }
 
 .nav-col-1 {
@@ -44,3 +71,12 @@ li {
 /* .nav-list button:focus {
   outline: 0;
 } */
+
+.sidenav-container {
+  padding-left: 3em;
+}
+
+.sidenav-container h4 {
+  margin: 0;
+  margin-bottom: 1em;
+}

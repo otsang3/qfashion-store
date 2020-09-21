@@ -6,8 +6,8 @@ function GetRoutes(props) {
 
     return {
         '/': () => <HomePage/>,
-        '/mens': () => <MenWomenHome category="men"/>,
-        '/womens': () => <MenWomenHome category="women"/>
+        '/mens': () => <MenWomenHome img={require('../images/men-fashion.jpg')}/>,
+        '/womens': () => <MenWomenHome img={require('../images/women-fashion3.png')}/>
     }
 }
 
