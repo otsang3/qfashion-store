@@ -5,11 +5,11 @@ function Nav() {
     return(
         <div className="nav-container">
             <div className="nav-col-1">
-                PLACEHOLDER
+                QFashion
             </div>
             <div className="nav-list">
-                <button>MEN</button>
-                <button>WOMEN</button>
+                <a href="/mens">MEN</a>
+                <a href="/womens">WOMEN</a>
             </div>
         </div>
     )

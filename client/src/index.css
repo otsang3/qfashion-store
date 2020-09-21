@@ -17,6 +17,9 @@ li {
 }
 
 .nav-col-1 {
+  font-size: 2rem;
+  height: 1em;
+  margin: 1em 0em;
   text-align: center;
 }
 
@@ -33,10 +36,9 @@ li {
   width: 10em;
 }
 
-.nav-list button {
-  background: none;
-  border: none;
-  cursor: pointer;
+.nav-list a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* .nav-list button:focus {

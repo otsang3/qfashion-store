@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRoutes } from 'hookrouter';
-import HomePage from './components/HomePage';
 import Nav from './components/Nav.js';
 import NotFoundPage from './components/NotFoundPage';
-import {routes} from './routes/Routes';
+import GetRoutes from './routes/GetRoutes';
 
 
 function App() {
 
-  const routeResult = useRoutes(routes);
+  const [state, setState ] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/store")
+    .then(res => res.json())
+    .then(data => setState(data[0]))
+  }, [])
+
+  const routeResult = useRoutes(GetRoutes(state));
 
   return (
       <div className="App">
