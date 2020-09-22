@@ -11,7 +11,8 @@ function GetRoutes(props) {
         '/': () => <HomePage/>,
         '/mens': () => <MenWomenHome category="mens" state={props.men} img={require('../images/men/men-fashion.jpg')}/>,
         '/mens/:name': (name) => <ProductList category="mens" name={name} state={props.men}/>,
-        '/womens': () => <MenWomenHome category="womens" state={props.women} img={require('../images/women/women-fashion3.png')}/>
+        '/womens': () => <MenWomenHome category="womens" state={props.women} img={require('../images/women/women-fashion3.png')}/>,
+        '/womens/:name': (name) => <ProductList category="womens" name={name} state={props.women}/>
     }} else {
         return {}
     }
