@@ -3,11 +3,13 @@ import React from 'react';
 function SideNav(props) {
 
     const renderList = () => {
-        return props.list.map((listItem, index) => {
-            return (
-                <li key={index}>{listItem}</li>
-            )
-        })
+        const listArr = [];
+        let index = 0;
+        for (let listItem in props.list) {
+                listArr.push(<li key={index}>{listItem}</li>)
+                index++;
+        }
+        return listArr;
     }
 
     return(
