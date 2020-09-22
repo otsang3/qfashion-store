@@ -63,7 +63,7 @@ ul {
   width: 10em;
 }
 
-.nav-list a {
+.nav-list a, .sidenav-container a, .prod-container a {
   color: inherit;
   text-decoration: none;
 }
@@ -73,13 +73,25 @@ ul {
 } */
 
 .prod-container {
-  width: 13em;
+  height: 25em;
+  cursor: pointer;
+  width: 20em;
+}
+
+.prod-container img{
+  height: 92.5%;
+}
+
+.prod-container p {
+  font-size: 0.85rem;
+  margin: 0.25em 0;
 }
 
 .prod-list-col {
   display: flex;
+  justify-content: space-between;
   margin-left: 3em;
-  width: 60em;
+  width: 62em;
 }
 
 .prod-list-container {
@@ -91,10 +103,10 @@ ul {
   padding-left: 3em;
 }
 
-.sidenav-container a {
+/* .sidenav-container a {
   color: inherit;
   text-decoration: none;
-}
+} */
 
 .sidenav-container h4 {
   margin: 0;
