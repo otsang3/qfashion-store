@@ -7,7 +7,6 @@ function Product(props) {
             <a href="/mens">
             <img src={require("../images" + props.item.imgUrl)} alt="product-image"/>
             <p>{props.item.name}</p>
-
             </a>
             
         </div>
