@@ -2,13 +2,15 @@ import React from 'react';
 
 function Product(props) {
 
+    const prodName = props.item.name.split(" ").join("-").toLowerCase();
+    const prodUrl = `/${props.category}/${props.prodType}/${prodName}`
+
     return(
-        <div className="prod-container" onClick={() => console.log("div clicked")}>
-            <a href="/mens">
+        <div className="prod-container">
+            <a href={prodUrl}>
             <img src={require("../images" + props.item.imgUrl)} alt="product-image"/>
             <p>{props.item.name}</p>
             </a>
-            
         </div>
     )
 }

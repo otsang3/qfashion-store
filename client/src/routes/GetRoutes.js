@@ -2,7 +2,7 @@ import React from 'react';
 import HomePage from '../components/HomePage'
 import MenWomenHome from "../components/MenWomenHome";
 import ProductItem from '../components/ProductItem';
-import ProductList from '../components/ProductItem';
+import ProductList from '../components/ProductList';
 
 function GetRoutes(props) {
 

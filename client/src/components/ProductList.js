@@ -4,12 +4,14 @@ import SideNav from './SideNav';
 
 function ProductList(props) {
 
+    const prodType = props.name.name;
+
     const renderList = () => {
         let list = []
         for (let category in props.state) {
-            if (category.toLowerCase() === props.name.name.toLowerCase()) {
+            if (category.toLowerCase() === prodType.toLowerCase()) {
                 props.state[category].map((item, index) => {
-                    return list.push(<Product key={index} item={item}></Product>)
+                    return list.push(<Product category={props.category} prodType={prodType} key={index} item={item}></Product>)
                 })
             }
         }
