@@ -9,9 +9,9 @@ function GetRoutes(props) {
 
     {return {
         '/': () => <HomePage/>,
-        '/mens': () => <MenWomenHome state={props.men} img={require('../images/men-fashion.jpg')}/>,
-        '/mens/:name': (name) => <ProductList name={name} state={props.men}/>,
-        '/womens': () => <MenWomenHome state={props.women} img={require('../images/women-fashion3.png')}/>
+        '/mens': () => <MenWomenHome category="mens" state={props.men} img={require('../images/men/men-fashion.jpg')}/>,
+        '/mens/:name': (name) => <ProductList category="mens" name={name} state={props.men}/>,
+        '/womens': () => <MenWomenHome category="womens" state={props.women} img={require('../images/women/women-fashion3.png')}/>
     }} else {
         return {}
     }

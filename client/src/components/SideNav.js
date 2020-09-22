@@ -6,7 +6,8 @@ function SideNav(props) {
         const listArr = [];
         let index = 0;
         for (let listItem in props.list) {
-                listArr.push(<li key={index}>{listItem}</li>)
+                let url = `/${props.category}/${listItem.toLowerCase()}`
+                listArr.push(<li key={index}><a href={url}>{listItem}</a></li>)
                 index++;
         }
         return listArr;

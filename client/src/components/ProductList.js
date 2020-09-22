@@ -19,12 +19,11 @@ function ProductList(props) {
     return(
         <div className="prod-list-container">
             <div>
-                <SideNav list={props.state}/>
+                <SideNav category={props.category} list={props.state}/>
             </div>
             <div className="prod-list-col">
                 {renderList()}
             </div>
-            
         </div>
     )
 }
