@@ -72,6 +72,21 @@ ul {
   outline: 0;
 } */
 
+.prod-container {
+  width: 13em;
+}
+
+.prod-list-col {
+  display: flex;
+  margin-left: 3em;
+  width: 60em;
+}
+
+.prod-list-container {
+  display: flex;
+  margin: 2em 0em;
+}
+
 .sidenav-container {
   padding-left: 3em;
 }

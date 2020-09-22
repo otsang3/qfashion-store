@@ -3,7 +3,7 @@ import React from 'react';
 function Product(props) {
 
     return(
-        <div>
+        <div className="prod-container">
             <h4>{props.item.name}</h4>
         </div>
     )

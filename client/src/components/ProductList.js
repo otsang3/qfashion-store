@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './Product';
+import SideNav from './SideNav';
 
 function ProductList(props) {
 
@@ -8,7 +9,7 @@ function ProductList(props) {
         for (let category in props.state) {
             if (category.toLowerCase() === props.name.name.toLowerCase()) {
                 props.state[category].map((item, index) => {
-                    list.push(<Product key={index} item={item}></Product>)
+                    return list.push(<Product key={index} item={item}></Product>)
                 })
             }
         }
@@ -16,8 +17,14 @@ function ProductList(props) {
     }
 
     return(
-        <div>
-            {renderList()}
+        <div className="prod-list-container">
+            <div>
+                <SideNav list={props.state}/>
+            </div>
+            <div className="prod-list-col">
+                {renderList()}
+            </div>
+            
         </div>
     )
 }
