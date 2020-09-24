@@ -8,7 +8,7 @@ function Product(props) {
     return(
         <div className="prod-container">
             <a href={prodUrl}>
-            <img src={require("../images" + props.item.imgUrl)} alt="product-image"/>
+            <img src={require("../images" + props.item.imgUrl)} alt="product"/>
             <p>{props.item.name}</p>
             </a>
         </div>

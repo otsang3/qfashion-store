@@ -87,6 +87,25 @@ ul {
   margin: 0.25em 0;
 }
 
+.prod-detail-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.prod-detail-row-1 {
+  height: 32em;
+  width: 25em;
+}
+
+.prod-detail-row-2 button {
+  background: #008CBA;
+  border: none;
+  color: white;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+}
+
 .prod-list-col {
   display: flex;
   justify-content: space-between;

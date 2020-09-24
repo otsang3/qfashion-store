@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRoutes } from 'hookrouter';
 import SideNav from './SideNav';
 
 function MenWomenHome(props) {
