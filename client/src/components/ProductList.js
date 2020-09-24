@@ -29,7 +29,6 @@ function ProductList(props) {
                 <SideNav category={props.category} list={globalContext[props.category]}/>   
             </div>
             <div className="prod-list-col">
-                {console.log(props)}
                 {renderList()}
             </div>
         </div>

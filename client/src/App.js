@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import MenWomenHome from './components/MenWomenHome';
 import Nav from './components/Nav.js';
 import NotFoundPage from './components/NotFoundPage';
+import ProductItem from './components/ProductItem';
 import ProductList from './components/ProductList';
 
 function App() {
@@ -26,9 +27,11 @@ function App() {
               <MenWomenHome category="men" img={require('./images/men/men-fashion.jpg')}/>
             )}/>
             <Route exact path="/men/:name" render={(name) => (
-              <ProductList category="men" name={name} state={state.men}/>
+              <ProductList category="men" name={name}/>
             )}/>
-            <Route path="/men/:name/:product" />
+            <Route exact path="/men/:name/:product" render={(name) => (
+              <ProductItem category="men" name={name}/>
+            )}/>
             <Route exact path="/women" render={() => (
               <MenWomenHome category="women" img={require('./images/women/women-fashion3.png')}/>
             )}/>
