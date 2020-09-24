@@ -94,11 +94,24 @@ ul {
 }
 
 .prod-detail-row-1 {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2em;
+}
+
+.prod-detail-row-1 img{
+  cursor: pointer;
+  height: 6em;
+  margin-bottom: 1em;
+  width: 5em;
+}
+
+.prod-detail-row-2 {
   height: 32em;
   width: 25em;
 }
 
-.prod-detail-row-2 button {
+.prod-detail-row-3 button {
   background: #008CBA;
   border: none;
   color: white;
