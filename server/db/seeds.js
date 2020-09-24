@@ -8,7 +8,12 @@ db.store.insertMany([
                 {
                     id: 1,
                     colour: "Navy",
-                    link: "https://www.asos.com/farah/farah-bective-soft-shell-jacket-in-navy/prd/21762294?colourwayid=60222299&SearchQuery=&cid=3606",
+                    imgUrl: [
+                        "/men/jackets/jacket-1.png",
+                        "/men/jackets/jacket-4.png",
+                        "/men/jackets/jacket-5.png",
+                        "/men/jackets/jacket-6.png"
+                    ],
                     name: "Farah Bective soft shell jacket",
                     price: 100.00,
                     size: ["S", "M", "L", "XL"]
@@ -16,7 +21,9 @@ db.store.insertMany([
                 {
                     id: 2,
                     colour: "Black",
-                    link: "https://www.asos.com/polo-ralph-lauren/polo-ralph-lauren-harrington-jacket-in-black/prd/5112387?colourwayid=15725122&SearchQuery=&cid=3606",
+                    imgUrl: [
+                        "/men/jackets/jacket-2.png"
+                    ],
                     name: "Ralph Lauren harrington jacket",
                     price: 159.00,
                     size: ["XS", "S", "M", "L"]
@@ -24,7 +31,9 @@ db.store.insertMany([
                 {
                     id: 3,
                     colour: "Khaki",
-                    link: "https://www.asos.com/rains/rains-hooded-jacket-in-mustard/prd/21060858?colourwayid=60137295&SearchQuery=&cid=3606",
+                    imgUrl: [
+                        "/men/jackets/jacket-3.png"
+                    ],
                     name: "Rains hooded jacket",
                     price: 75.00,
                     size: ["M", "L"]
