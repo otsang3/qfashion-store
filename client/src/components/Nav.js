@@ -8,8 +8,8 @@ function Nav() {
                 QFashion
             </div>
             <div className="nav-list">
-                <a href="/mens">MEN</a>
-                <a href="/womens">WOMEN</a>
+                <a href="/men">MEN</a>
+                <a href="/women">WOMEN</a>
             </div>
         </div>
     )
