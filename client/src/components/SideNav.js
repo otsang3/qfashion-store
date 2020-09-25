@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function SideNav(props) {
 
@@ -13,7 +14,7 @@ function SideNav(props) {
         let index = 0;
         for (let listItem in props.list) {
                 let url = `/${props.category}/${listItem.toLowerCase()}`
-                listArr.push(<li key={index}><a href={url}>{capitaliseWord(listItem)}</a></li>)
+                listArr.push(<li key={index}><Link to={url}>{capitaliseWord(listItem)}</Link></li>)
                 index++;
         }
         return listArr;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Nav() {
 
@@ -8,8 +9,9 @@ function Nav() {
                 QFashion
             </div>
             <div className="nav-list">
-                <a href="/men">MEN</a>
-                <a href="/women">WOMEN</a>
+                <Link to="/men">MEN</Link>
+                <Link to="/women">WOMEN</Link>
+
             </div>
         </div>
     )
