@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GlobalContext } from './GlobalState';
 
@@ -9,6 +9,7 @@ function ProductDetail(props) {
     const globalContext = useContext(GlobalContext);
     const { addToCart } = globalContext;
     const [imgDisplay, setDisplay] = useState(props.item.imgUrl[0])
+    const [itemSize, setSize] = useState(props.item.size[0])
     const item = props.item;
     const notify = () => {
         toast.info('Added to Bag',{
@@ -22,12 +23,17 @@ function ProductDetail(props) {
   
 
     const handleAdd = (item) => {
-        addToCart(item);
+        const addItem = {...item, size: itemSize}
+        addToCart(addItem);
         notify();
     }
 
     const changeDisplay = (imgUrl) => {
         setDisplay(imgUrl);
+    }
+
+    const handleSizeChange = (event) => {
+        setSize(prevState => event.target.value)
     }
 
     const renderOptions = () => {
@@ -58,12 +64,13 @@ function ProductDetail(props) {
                 <h4>£{item.price}</h4>
                 <p>Colour: {item.colour}</p>
                 <label>Size: </label>
-                <select>
+                <select onChange={handleSizeChange}>
                     {renderOptions()}
                 </select>
                 <br/>
                 <button onClick={() => handleAdd(item)}>Add to Bag</button>
             </div>
+            <ToastContainer style={{width: "10em", textAlign: "center"}} limit={1}/>
         </div>
     )
 }

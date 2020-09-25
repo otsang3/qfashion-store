@@ -26,6 +26,36 @@ ul {
   padding: 0;
 }
 
+.cart-container {
+  display: flex;
+}
+
+.cart-item {
+  display: flex;
+  height: 10em;
+  width: 40em;
+}
+
+.cart-item-image {
+  width: 20%;
+  height:100%;
+}
+
+.cart-item-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.cart-row-1 {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-row-2 {
+  border: 1px solid green;
+}
+
 .front-page-container {
   display: flex;
   flex-direction: row;
@@ -139,8 +169,4 @@ ul {
 .sidenav-container h4 {
   margin: 0;
   margin-bottom: 1em;
-}
-
-.Toastify__toast-container {
-  width: 100px;
 }

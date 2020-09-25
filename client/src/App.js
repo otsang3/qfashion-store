@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Cart from './components/Cart';
 import GlobalState from './components/GlobalState';
 import HomePage from './components/HomePage';
 import MenWomenHome from './components/MenWomenHome';
@@ -23,6 +24,7 @@ function App() {
           <Nav/>
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route exact path="/cart" component={Cart}/>
             <Route exact path="/men" render={() => (
               <MenWomenHome category="men" img={require('./images/men/men-fashion.jpg')}/>
             )}/>

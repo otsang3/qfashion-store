@@ -11,7 +11,7 @@ function Nav() {
             <div className="nav-list">
                 <Link to="/men">MEN</Link>
                 <Link to="/women">WOMEN</Link>
-
+                <Link to="/cart">Cart</Link>
             </div>
         </div>
     )

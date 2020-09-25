@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 function SideNav(props) {
 
-    console.log(props);
-
     const capitaliseWord = (string) => {
         return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase()
     }
