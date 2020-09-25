@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { GlobalContext } from './GlobalState';
 
 function ProductDetail(props) {
 
+    const globalContext = useContext(GlobalContext);
+    console.log(globalContext);
+    const { addToCart } = globalContext;
     const [imgDisplay, setDisplay] = useState(props.item.imgUrl[0])
-
     const item = props.item;
 
     const changeDisplay = (imgUrl) => {
@@ -18,8 +21,8 @@ function ProductDetail(props) {
 
     const renderPreviews = () => {
         const imageArr = []
-        item.imgUrl.map(image => {
-            imageArr.push(<img onClick={() => changeDisplay(image)} src={require('../images' + image)}/>)
+        item.imgUrl.map((image, index) => {
+            imageArr.push(<img key={index} onClick={() => changeDisplay(image)} src={require('../images' + image)}/>)
         })
         return imageArr;
     }
@@ -41,7 +44,7 @@ function ProductDetail(props) {
                     {renderOptions()}
                 </select>
                 <br/>
-                <button>Add to Cart</button>
+                <button onClick={() => addToCart(item)}>Add to Cart</button>
             </div>
         </div>
     )

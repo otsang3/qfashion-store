@@ -13,9 +13,14 @@ function GlobalState(props) {
         .then(data => {setStoreData(data[0])})
     }, [])
 
+    const addToCart = (product) => {
+        setCart(prevState => [...prevState, product])
+    }
+
     if (storeData) {
         return(
             <GlobalContext.Provider value={{
+                addToCart: addToCart,
                 cart: cart,
                 setCart: setCart,
                 storeData: storeData
