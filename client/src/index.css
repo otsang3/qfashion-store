@@ -140,3 +140,7 @@ ul {
   margin: 0;
   margin-bottom: 1em;
 }
+
+.Toastify__toast-container {
+  width: 100px;
+}

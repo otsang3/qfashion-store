@@ -1,13 +1,30 @@
 import React, { useContext, useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { GlobalContext } from './GlobalState';
 
+toast.configure()
 function ProductDetail(props) {
 
     const globalContext = useContext(GlobalContext);
-    console.log(globalContext);
     const { addToCart } = globalContext;
     const [imgDisplay, setDisplay] = useState(props.item.imgUrl[0])
     const item = props.item;
+    const notify = () => {
+        toast.info('Added to Bag',{
+            position: "top-center",
+            autoClose: 1750,
+            hideProgressBar: true,
+            closeOnClick: true,
+            draggable: false
+        })
+    }
+  
+
+    const handleAdd = (item) => {
+        addToCart(item);
+        notify();
+    }
 
     const changeDisplay = (imgUrl) => {
         setDisplay(imgUrl);
@@ -27,6 +44,7 @@ function ProductDetail(props) {
         return imageArr;
     }
 
+    
     return(
         <div className="prod-detail-container">
             <div className="prod-detail-row-1">
@@ -44,7 +62,7 @@ function ProductDetail(props) {
                     {renderOptions()}
                 </select>
                 <br/>
-                <button onClick={() => addToCart(item)}>Add to Cart</button>
+                <button onClick={() => handleAdd(item)}>Add to Bag</button>
             </div>
         </div>
     )
