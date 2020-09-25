@@ -19,7 +19,7 @@ function App() {
     )} else {
     return (
       <Router>
-        <div className="App">
+        <div className="app">
           <GlobalState>
           <Nav/>
           <Switch>

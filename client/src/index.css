@@ -26,8 +26,20 @@ ul {
   padding: 0;
 }
 
+.app {
+  background-color: #f8f8ff;
+  height: 100vh;
+  width: 100vw;
+}
+
 .cart-container {
   display: flex;
+}
+
+.cart-form-discount {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
 }
 
 .cart-item {
@@ -53,7 +65,52 @@ ul {
 }
 
 .cart-row-2 {
+  background-color: white;  
   border: 1px solid green;
+  height: 28em;
+  padding: 1em 2em;
+  width: 20em;
+}
+
+.cart-row-2 p, h3 {
+  font-size: 0.80em;
+  margin: 0.3em 0;
+}
+
+.cart-row-2 h3 {
+  margin: 1em 0;
+}
+
+.checkout-btn {
+  background-color: black;
+  border: none;
+  color: white;
+  margin-bottom: 2em;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.cart-summary-display {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.discount-btn, .discount-input {
+  box-sizing: border-box;
+  font-size: 0.8em;
+  height: 2em;
+}
+
+.discount-btn {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2.5px;
+  width: 20%
+}
+
+.discount-input {
+  width: 78%
 }
 
 .front-page-container {
@@ -96,6 +153,12 @@ ul {
 .nav-list a, .sidenav-container a, .prod-container a {
   color: inherit;
   text-decoration: none;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
 
 .prod-container {

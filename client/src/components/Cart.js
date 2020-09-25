@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from './GlobalState';
+import { FaApplePay, FaCcMastercard, FaCcPaypal } from 'react-icons/fa';
+import { RiVisaLine } from 'react-icons/ri';
+import { SiGooglepay } from 'react-icons/si';
 
 function Cart(props) {
 
     const globalContext = useContext(GlobalContext)
     const { cart } = globalContext;
     const [total, setTotal] = useState(0)
-    console.log(cart);
+    const deliveryCharge = 5.99
 
     useEffect(() => {
         if (cart.length > 0) {
@@ -41,7 +44,34 @@ function Cart(props) {
                 {renderCartItems()}
             </div>
             <div className="cart-row-2">
-                div2
+                <form>
+                    <p>Add a discount code</p>
+                    <div className="cart-form-discount">
+                        <input className="discount-input" type="text"/>
+                        <button className="discount-btn">ADD</button>
+                    </div> 
+                </form>
+                <p className="cart-summary-display">
+                    <span>Subtotal</span>
+                    <span>£{total}</span>
+                </p>
+                <p className="cart-summary-display">
+                    <span>Delivery</span>
+                    <span>£{deliveryCharge}</span>
+                </p>
+                <h3 className="cart-summary-display">
+                    <span>Total</span>
+                    <span>£{total + deliveryCharge}</span>
+                </h3>
+                <button className="checkout-btn">CONTINUE TO CHECKOUT</button>
+                <p>We accept</p>
+                <p className="payment-icons">
+                    <FaApplePay size={40}/>
+                    <SiGooglepay size={40}/>
+                    <FaCcMastercard size={40}/>
+                    <FaCcPaypal size={40}/>
+                    <RiVisaLine size={40}/>
+                </p>
             </div>
         </div>
     )
