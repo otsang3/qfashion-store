@@ -4,17 +4,22 @@ export const GlobalContext = createContext();
 
 function GlobalState(props) {
 
-    const [state, setState ] = useState(null);
+    const [storeData, setStoreData ] = useState(null);
+    const [cart, setCart] = useState([])
 
     useEffect(() => {
         fetch("http://localhost:3000/store")
         .then(res => res.json())
-        .then(data => {setState(data[0])})
+        .then(data => {setStoreData(data[0])})
     }, [])
 
-    if (state) {
+    if (storeData) {
         return(
-            <GlobalContext.Provider value={state}>
+            <GlobalContext.Provider value={{
+                cart: cart,
+                setCart: setCart,
+                storeData: storeData
+                }}>
                 {props.children}
             </GlobalContext.Provider>
         )

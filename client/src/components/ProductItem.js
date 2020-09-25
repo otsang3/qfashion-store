@@ -6,9 +6,9 @@ import ProductDetail from './ProductDetail';
 function ProductItem(props) {
 
     const globalContext = useContext(GlobalContext);
-    const prodCategories = globalContext[props.category];
+    const { storeData } = globalContext;
+    const prodCategories = storeData[props.category];
     const { match: {params}} = props.name;
-    console.log(prodCategories);
 
     const renderItem = () => {
         for (let category in prodCategories) {
