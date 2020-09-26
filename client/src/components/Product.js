@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Product(props) {
 
@@ -7,10 +8,10 @@ function Product(props) {
 
     return(
         <div className="prod-container">
-            <a href={prodUrl}>
+            <Link to={prodUrl}>
             <img src={require("../images" + props.item.imgUrl[0])} alt="product"/>
             <p>{props.item.name}</p>
-            </a>
+            </Link>
         </div>
     )
 }

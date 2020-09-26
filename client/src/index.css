@@ -34,6 +34,7 @@ ul {
 
 .cart-container {
   display: flex;
+  justify-content: center;
 }
 
 .cart-form-discount {
@@ -45,7 +46,29 @@ ul {
 .cart-item {
   display: flex;
   height: 10em;
+  margin-bottom: 1em;
   width: 40em;
+}
+
+
+.cart-item-desc p, h4 {
+  margin: 0;
+}
+
+.cart-item-desc h4 {
+  margin-bottom: 1em;
+}
+
+.cart-item-desc p {
+  font-size: 0.8em;
+}
+
+.cart-item-desc {
+  padding: 0 1em;
+}
+
+.cart-item-desc button {
+  margin-top: 1em;
 }
 
 .cart-item-image {
@@ -59,16 +82,21 @@ ul {
 }
 
 .cart-row-1 {
+  background-color: white;
   border: 1px solid red;
   display: flex;
   flex-direction: column;
+  height: 27em;
+  overflow: scroll;
+  padding: 2em 0;
+  width: 30em;
 }
 
 .cart-row-2 {
   background-color: white;  
   border: 1px solid green;
-  height: 28em;
-  padding: 1em 2em;
+  height: 27em;
+  padding: 2em 2em;
   width: 20em;
 }
 

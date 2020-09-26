@@ -7,7 +7,7 @@ import { SiGooglepay } from 'react-icons/si';
 function Cart(props) {
 
     const globalContext = useContext(GlobalContext)
-    const { cart } = globalContext;
+    const { cart, removeFromCart } = globalContext;
     const [total, setTotal] = useState(0)
     const deliveryCharge = 5.99
 
@@ -30,8 +30,10 @@ function Cart(props) {
                 </div>
                 <div className="cart-item-desc">
                     <h4>{item.name}</h4>
-                    <p>£{item.price}</p>
-                    <label>Colour: {item.colour}</label>
+                    <p>Price: £{item.price}</p>
+                    <p>Colour: {item.colour}</p>
+                    <p>Size: {item.size}</p>
+                    <button onClick={() => removeFromCart(index)}>Remove item</button>
                 </div>
             </div>
         )))
@@ -41,7 +43,7 @@ function Cart(props) {
     return(
         <div className="cart-container">
             <div className="cart-row-1">
-                {renderCartItems()}
+                {cart.length > 0 && renderCartItems()}
             </div>
             <div className="cart-row-2">
                 <form>
@@ -56,6 +58,10 @@ function Cart(props) {
                     <span>£{total}</span>
                 </p>
                 <p className="cart-summary-display">
+                    <span>Discount</span>
+                    <span>£{total}</span>
+                </p>
+                <p className="cart-summary-display">
                     <span>Delivery</span>
                     <span>£{deliveryCharge}</span>
                 </p>
@@ -64,13 +70,16 @@ function Cart(props) {
                     <span>£{total + deliveryCharge}</span>
                 </h3>
                 <button className="checkout-btn">CONTINUE TO CHECKOUT</button>
-                <p>We accept</p>
+                <p style={{marginBottom: "1em"}}>We accept</p>
                 <p className="payment-icons">
                     <FaApplePay size={40}/>
                     <SiGooglepay size={40}/>
                     <FaCcMastercard size={40}/>
                     <FaCcPaypal size={40}/>
                     <RiVisaLine size={40}/>
+                </p>
+                <p style={{color: "grey", marginTop: "3em"}}>
+                We are happy to refund within 28 days for any unsuitable items, provided they are in resalable condition. Please note that our Return policy may differ for Designer, Special collections and our external home assortment.
                 </p>
             </div>
         </div>

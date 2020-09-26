@@ -17,11 +17,20 @@ function GlobalState(props) {
         setCart(prevState => [...prevState, product])
     }
 
+    const removeFromCart = (prodIndex) => {
+        setCart(prevState => {
+            const cartCopy = [...prevState]
+            cartCopy.splice(prodIndex, 1)
+            return cartCopy;
+        })
+    }
+
     if (storeData) {
         return(
             <GlobalContext.Provider value={{
                 addToCart: addToCart,
                 cart: cart,
+                removeFromCart: removeFromCart,
                 setCart: setCart,
                 storeData: storeData
                 }}>
