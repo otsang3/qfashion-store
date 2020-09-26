@@ -12,7 +12,7 @@ function SideNav(props) {
         let index = 0;
         for (let listItem in props.list) {
                 let url = `/${props.category}/${listItem.toLowerCase()}`
-                listArr.push(<li key={index}><Link to={url}>{capitaliseWord(listItem)}</Link></li>)
+                listArr.push(<li key={index}><Link className="nav-list-link" to={url}>{capitaliseWord(listItem)}</Link></li>)
                 index++;
         }
         return listArr;

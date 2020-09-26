@@ -118,6 +118,18 @@ ul {
   width: 100%;
 }
 
+.cart-empty-container {
+  border: 1px solid lightgrey;
+  background-color: white;
+  display: flex;
+  flex-direction: column;;
+  height: 15em;
+  justify-content: center;
+  margin: 2em auto;
+  text-align: center;
+  width: 60em;
+}
+
 .cart-summary-display {
   display: flex;
   justify-content: space-between;
@@ -220,6 +232,10 @@ ul {
   text-decoration: none;
 }
 
+.nav-list-link:hover {
+  color: grey;
+}
+
 .payment-icons {
   display: flex;
   justify-content: space-between;
@@ -306,3 +322,5 @@ ul {
   margin: 0;
   margin-bottom: 1em;
 }
+
+

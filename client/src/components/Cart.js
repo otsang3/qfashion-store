@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from './GlobalState';
-import { FaApplePay, FaCcMastercard, FaCcPaypal } from 'react-icons/fa';
+import { FaApplePay, FaShoppingCart, FaCcMastercard, FaCcPaypal } from 'react-icons/fa';
 import { RiVisaLine } from 'react-icons/ri';
 import { SiGooglepay } from 'react-icons/si';
 
@@ -58,8 +58,10 @@ function Cart(props) {
 
     if (cart.length === 0) {
         return (
-            <div>
-                NO ITEMS IN SHOPPING CART
+            <div className="cart-empty-container">
+                <p><FaShoppingCart color="grey" size={40}/></p>
+                <p>Your shopping bag is empty</p>
+                <p style={{fontSize: "0.8em", marginBottom: "2em"}}>Once you have added items in your shopping bag, you can check out from here</p>   
             </div>
         )
     }

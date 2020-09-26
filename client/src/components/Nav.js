@@ -26,9 +26,8 @@ function Nav() {
                 QFashion
             </div>
             <div className="nav-list">
-                <Link to="/men">MEN</Link>
-                <Link to="/women">WOMEN</Link>
-                <Link to="/cart">Cart</Link>
+                <Link className="nav-list-link" to="/men">MEN</Link>
+                <Link className="nav-list-link" to="/women">WOMEN</Link>
             </div>
         </div>
     )
