@@ -12,6 +12,8 @@ function ProductList(props) {
 
     const { match: {params} } = props.name;
 
+    const capitaliseWord = (string) => string.charAt(0).toUpperCase() + string.slice(1)
+
     const renderList = () => {
         let list = []
         for (let category in prodCategories) {
@@ -30,8 +32,12 @@ function ProductList(props) {
                 <SideNav category={props.category} list={storeData[props.category]}/>   
             </div>
             <div className="prod-list-col">
-                {renderList()}
+                <h2>{capitaliseWord(params.name)}</h2>
+                <div className="prod-list-items">
+                    {renderList()}
+                </div>
             </div>
+            
         </div>
     )
 }

@@ -11,6 +11,7 @@ function Product(props) {
             <Link to={prodUrl}>
             <img src={require("../images" + props.item.imgUrl[0])} alt="product"/>
             <p>{props.item.name}</p>
+            <p>£{props.item.price}</p>
             </Link>
         </div>
     )

@@ -20,7 +20,7 @@ function Cart(props) {
             }, 0)
             setTotal(total)
         } 
-    }, [props])
+    }, [cart])
 
     const discountCode = "QSALE10";
 
@@ -56,10 +56,18 @@ function Cart(props) {
         return cartArr;
     }
 
+    if (cart.length === 0) {
+        return (
+            <div>
+                NO ITEMS IN SHOPPING CART
+            </div>
+        )
+    }
+    
     return(
         <div className="cart-container">
             <div className="cart-row-1">
-                {cart.length > 0 && renderCartItems()}
+                {renderCartItems()}
             </div>
             <div className="cart-row-2">
                 <form>
@@ -75,7 +83,7 @@ function Cart(props) {
                 </p>
                 <p className="cart-summary-display">
                     <span>Discount</span>
-                    <span>£{discount}</span>
+                    <span>-£{discount}</span>
                 </p>
                 <p className="cart-summary-display">
                     <span>Delivery</span>

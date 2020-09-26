@@ -34,7 +34,9 @@ ul {
 
 .cart-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 57em;
 }
 
 .cart-form-discount {
@@ -83,18 +85,16 @@ ul {
 
 .cart-row-1 {
   background-color: white;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   height: 27em;
   overflow: scroll;
-  padding: 2em 0;
+  padding: 2em 1em;
   width: 30em;
 }
 
 .cart-row-2 {
   background-color: white;  
-  border: 1px solid green;
   height: 27em;
   padding: 2em 2em;
   width: 20em;
@@ -158,6 +158,38 @@ ul {
   width: 50em;
 }
 
+.nav-bar-container {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 2em;
+  justify-content: space-between;
+}
+
+.nav-bar-container div {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 33%;
+}
+
+.nav-bar-row-3 {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-bar-row-3 div {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 30%;
+}
+
+.nav-bar-row-3 p {
+  margin-left: 0.25em;
+}
+
 .nav-col-1 {
   font-size: 2rem;
   height: 1em;
@@ -168,6 +200,11 @@ ul {
 .nav-container {
   display: flex;
   flex-direction: column;
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .nav-list {
@@ -236,10 +273,18 @@ ul {
   padding: 0.5em 1em;
 }
 
+.prod-list-col h2 {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
 .prod-list-col {
+  margin-left: 3em;
+}
+
+.prod-list-items {
   display: flex;
   justify-content: space-between;
-  margin-left: 3em;
   width: 62em;
 }
 
@@ -249,7 +294,7 @@ ul {
 }
 
 .sidenav-container {
-  padding-left: 3em;
+  padding-left: 2em;
 }
 
 /* .sidenav-container a {
