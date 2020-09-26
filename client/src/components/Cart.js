@@ -8,7 +8,9 @@ function Cart(props) {
 
     const globalContext = useContext(GlobalContext)
     const { cart, removeFromCart } = globalContext;
-    const [total, setTotal] = useState(0)
+    const [ discount, setDiscount ] = useState(0)
+    const [ input, setInput ] = useState("")
+    const [ total, setTotal ] = useState(0)
     const deliveryCharge = 5.99
 
     useEffect(() => {
@@ -20,7 +22,21 @@ function Cart(props) {
         } 
     }, [props])
 
-    
+    const discountCode = "QSALE10";
+
+    const handleDiscount = (event) => {
+        event.preventDefault();
+        if (discount === 0) {
+            if (input.toUpperCase() === discountCode) {
+                setDiscount(10)
+            }
+        }
+    }
+
+    const handleInput = (event) => {
+        setInput(event.target.value)
+    }
+
     const renderCartItems = () => {
         const cartArr = [];
         cart.map((item, index) => (
@@ -49,8 +65,8 @@ function Cart(props) {
                 <form>
                     <p>Add a discount code</p>
                     <div className="cart-form-discount">
-                        <input className="discount-input" type="text"/>
-                        <button className="discount-btn">ADD</button>
+                        <input className="discount-input" onChange={handleInput} type="text"/>
+                        <button className="discount-btn" onClick={handleDiscount}>ADD</button>
                     </div> 
                 </form>
                 <p className="cart-summary-display">
@@ -59,7 +75,7 @@ function Cart(props) {
                 </p>
                 <p className="cart-summary-display">
                     <span>Discount</span>
-                    <span>£{total}</span>
+                    <span>£{discount}</span>
                 </p>
                 <p className="cart-summary-display">
                     <span>Delivery</span>
@@ -67,7 +83,7 @@ function Cart(props) {
                 </p>
                 <h3 className="cart-summary-display">
                     <span>Total</span>
-                    <span>£{total + deliveryCharge}</span>
+                    <span>£{total + deliveryCharge - discount}</span>
                 </h3>
                 <button className="checkout-btn">CONTINUE TO CHECKOUT</button>
                 <p style={{marginBottom: "1em"}}>We accept</p>
