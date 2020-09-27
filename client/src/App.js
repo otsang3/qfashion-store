@@ -23,7 +23,20 @@ function App() {
           <GlobalState>
           <Nav/>
           <Switch>
-            <Route exact path="/" component={HomePage} />
+            <Route exact path="/" render={() => (
+              <HomePage
+                img1={require('./images/men/jackets/jacket-11.png')}
+                img2={require('./images/women/jackets/jacket-7.png')}
+                img3={require('./images/women/shoes/shoe-12.png')}
+                link1="/men/jackets/rains-hooded-jacket"
+                link2="/women/jackets/miss-selfridge-faux-leather-biker-jacket"
+                link3="/women/shoes/love-moschino-logo-tapping-trainers"
+                promoText1="Shop men's jackets"
+                promoText2="Shop women's jackets"
+                promoText3="Shop women's shoes"
+              />
+            )}
+            />
             <Route exact path="/cart" component={Cart}/>
             <Route exact path="/men" render={() => (
               <MenWomenHome category="men" img={require('./images/men/jackets/jacket-5.png')} promo={{
