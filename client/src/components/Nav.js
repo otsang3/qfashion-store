@@ -22,8 +22,8 @@ function Nav() {
                 </div>
                 
             </div>
-            <div className="nav-col-1">
-                QFashion
+            <div className="nav-logo-container">
+                <img className="nav-logo" src={require('../images/logo.png')} alt="logo"/>
             </div>
             <div className="nav-list">
                 <Link className="nav-list-link" to="/men">MEN</Link>

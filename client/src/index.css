@@ -219,11 +219,18 @@ ul {
   margin-left: 0.25em;
 }
 
-.nav-col-1 {
+.nav-logo-container {
   font-size: 2rem;
-  height: 1em;
-  margin: 1em 0em;
+  height: 2em;
+  margin: 0.5em auto;
+  margin-top: 1.5em;
   text-align: center;
+  width: 8em;
+}
+
+.nav-logo {
+  object-fit: none;
+  object-position: 10% 50%;
 }
 
 .nav-container {
@@ -239,6 +246,7 @@ ul {
 
 .nav-list {
   display: flex;
+  font-weight: bold;
   justify-content: space-evenly;
   margin: 0 auto;
   padding: 0em;
