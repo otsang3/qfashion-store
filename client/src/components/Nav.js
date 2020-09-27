@@ -8,7 +8,7 @@ function Nav() {
     return(
         <div className="nav-container">
             <div className="nav-bar-container">
-                <div style={{cursor: "pointer"}}><Link className="nav-link" to="/home">Home</Link></div>
+                <div className="nav-bar-home"><Link className="nav-link" to="/">Home</Link></div>
                 <div>Use discount code 'QSALE10' for 10% OFF!</div>
                 <div className="nav-bar-row-3">
                     <div>

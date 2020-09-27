@@ -33,7 +33,7 @@ function ProductDetail(props) {
     }
 
     const handleSizeChange = (event) => {
-        setSize(prevState => event.target.value)
+        setSize(event.target.value)
     }
 
     const renderOptions = () => {

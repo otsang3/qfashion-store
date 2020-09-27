@@ -26,7 +26,11 @@ function App() {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/cart" component={Cart}/>
             <Route exact path="/men" render={() => (
-              <MenWomenHome category="men" img={require('./images/men/men-fashion.jpg')}/>
+              <MenWomenHome category="men" img={require('./images/men/jackets/jacket-5.png')} promo={{
+                link: "/men/jackets/farah-bective-soft-shell-jacket",
+                name: "Farah Bective soft shell jacket",
+                price: 100
+              }}/>
             )}/>
             <Route exact path="/men/:name" render={(name) => (
               <ProductList category="men" name={name}/>
@@ -35,12 +39,18 @@ function App() {
               <ProductItem category="men" name={name}/>
             )}/>
             <Route exact path="/women" render={() => (
-              <MenWomenHome category="women" img={require('./images/women/women-fashion3.png')}/>
+              <MenWomenHome category="women" img={require('./images/women/jackets/jacket-9.png')} promo={{
+                link: "women/jackets/pimkie-teddy-jacket",
+                name: "Pimkie Teddy jacket",
+                price: 49.99
+              }}/>
             )}/>
-            <Route path="/women/:name" render={(name) => (
-              <ProductList category="womens" name={name} state={state.women}/>
+            <Route exact path="/women/:name" render={(name) => (
+              <ProductList category="women" name={name}/>
             )}/>
-            <Route path="/women/:name/:product" />
+            <Route exact path="/women/:name/:product" render={(name) => (
+              <ProductItem category="women" name={name}/>
+            )}/>
           </Switch>
           </GlobalState>  
         </div>
