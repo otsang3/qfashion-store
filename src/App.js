@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Cart from './components/Cart';
+import Footer from './components/Footer';
 import GlobalState from './components/GlobalState';
 import HomePage from './components/HomePage';
 import MenWomenHome from './components/MenWomenHome';
@@ -68,6 +69,7 @@ function App() {
           </Switch>
           </GlobalState>  
         </div>
+        <Footer/>
       </Router>
     );
   }
