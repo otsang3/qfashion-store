@@ -42,7 +42,7 @@ function Cart(props) {
         cart.map((item, index) => (
             cartArr.push(<div className="cart-item" key={index}>
                 <div className="cart-item-image">
-                    <img src={require('../images' + item.imgUrl[0])}/>
+                    <img src={require('../images' + item.imgUrl[0])} alt="cart-item"/>
                 </div>
                 <div className="cart-item-desc">
                     <h4>{item.name}</h4>

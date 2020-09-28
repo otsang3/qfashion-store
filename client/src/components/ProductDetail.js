@@ -45,7 +45,7 @@ function ProductDetail(props) {
     const renderPreviews = () => {
         const imageArr = []
         item.imgUrl.map((image, index) => {
-            imageArr.push(<img key={index} onClick={() => changeDisplay(image)} src={require('../images' + image)}/>)
+            return imageArr.push(<img alt="preview" key={index} onClick={() => changeDisplay(image)} src={require('../images' + image)}/>)
         })
         return imageArr;
     }

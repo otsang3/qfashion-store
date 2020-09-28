@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
+import firebase from '../Firebase';
 
 export const GlobalContext = createContext();
 
@@ -7,10 +8,20 @@ function GlobalState(props) {
     const [storeData, setStoreData ] = useState(null);
     const [cart, setCart] = useState([])
 
+    // useEffect(() => {
+    //     fetch("http://localhost:3000/store")
+    //     .then(res => res.json())
+    //     .then(data => {setStoreData(data[0])})
+    // }, [])
+
     useEffect(() => {
-        fetch("http://localhost:3000/store")
-        .then(res => res.json())
-        .then(data => {setStoreData(data[0])})
+        firebase
+        .firestore()
+        .collection('qfashion')
+        .onSnapshot((snapshot) => {
+            const fetchData = snapshot.docs[0].data()
+            setStoreData(fetchData)
+        })
     }, [])
 
     const addToCart = (product) => {

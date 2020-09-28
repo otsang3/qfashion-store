@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Cart from './components/Cart';
+import firebase from './Firebase';
 import GlobalState from './components/GlobalState';
 import HomePage from './components/HomePage';
 import MenWomenHome from './components/MenWomenHome';
@@ -11,7 +12,7 @@ import ProductList from './components/ProductList';
 
 function App() {
 
-  const [state, setState ] = useState(true);
+  const [state] = useState(true);
 
   if (!state) {
     return (

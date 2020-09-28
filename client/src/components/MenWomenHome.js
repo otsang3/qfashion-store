@@ -16,7 +16,7 @@ function MenWomenHome(props) {
             </div>
             <div className="front-page-row-2">
                 <Link to={props.promo.link}>
-                <img src={props.img}/>
+                <img src={props.img} alt="promo"/>
                     <div className="promo-text">
                         <p>{props.promo.name}</p>
                         <p>£{props.promo.price}</p>
