@@ -1,4 +1,4 @@
-DEMO App: [jshighlow.herokuapp.com](jshighlow.herokuapp.com)
+DEMO App: [qfashion.herokuapp.com](qfashion.herokuapp.com)
 
 ![demo app screenshot](./src/images/screenshot.png)
 
