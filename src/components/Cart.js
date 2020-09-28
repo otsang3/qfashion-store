@@ -18,7 +18,7 @@ function Cart(props) {
             const total = cart.reduce(function(runningTotal, item) {
                 return runningTotal + item.price
             }, 0)
-            setTotal(total)
+            setTotal(parseFloat(total.toFixed(2)))
         } 
     }, [cart])
 
@@ -93,7 +93,7 @@ function Cart(props) {
                 </p>
                 <h3 className="cart-summary-display">
                     <span>Total</span>
-                    <span>£{total + deliveryCharge - discount}</span>
+                    <span>£{(total + deliveryCharge - discount).toFixed(2)}</span>
                 </h3>
                 <button className="checkout-btn">CONTINUE TO CHECKOUT</button>
                 <p style={{marginBottom: "1em"}}>We accept</p>

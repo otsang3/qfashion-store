@@ -53,7 +53,7 @@ ul {
 }
 
 
-.cart-item-desc p, h4 {
+.cart-item-desc p, .cart-item-desc h4 {
   margin: 0;
 }
 
@@ -100,7 +100,7 @@ ul {
   width: 20em;
 }
 
-.cart-row-2 p, h3 {
+.cart-row-2 p, .cart-row-2 h3 {
   font-size: 0.80em;
   margin: 0.3em 0;
 }
@@ -305,7 +305,7 @@ ul {
   width: 50em;
 }
 
-.not-found-container h1, p{
+.not-found-container h1, .not-found-container p {
   text-align: center;
 }
 
