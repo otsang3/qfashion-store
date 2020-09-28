@@ -8,12 +8,6 @@ function GlobalState(props) {
     const [storeData, setStoreData ] = useState(null);
     const [cart, setCart] = useState([])
 
-    // useEffect(() => {
-    //     fetch("http://localhost:3000/store")
-    //     .then(res => res.json())
-    //     .then(data => {setStoreData(data[0])})
-    // }, [])
-
     useEffect(() => {
         firebase
         .firestore()

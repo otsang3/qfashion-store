@@ -297,6 +297,18 @@ ul {
   color: grey;
 }
 
+.not-found-container {
+  background-color: white;
+  border: 1px solid lightgrey;
+  height: 10em;
+  margin: 4em auto;
+  width: 50em;
+}
+
+.not-found-container h1, p{
+  text-align: center;
+}
+
 .payment-icons {
   display: flex;
   justify-content: space-between;

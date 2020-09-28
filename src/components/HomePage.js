@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 function HomePage(props){
 
-    console.log(props);
-
     return(
         <div className="home-container">
             <div className="home-col-1">

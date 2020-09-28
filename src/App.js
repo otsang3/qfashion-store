@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Cart from './components/Cart';
-import firebase from './Firebase';
 import GlobalState from './components/GlobalState';
 import HomePage from './components/HomePage';
 import MenWomenHome from './components/MenWomenHome';
@@ -65,6 +64,7 @@ function App() {
             <Route exact path="/women/:name/:product" render={(name) => (
               <ProductItem category="women" name={name}/>
             )}/>
+            <Route component={NotFoundPage}/>
           </Switch>
           </GlobalState>  
         </div>
