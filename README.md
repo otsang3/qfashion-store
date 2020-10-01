@@ -1,4 +1,4 @@
-DEMO App: [qfashion.herokuapp.com](qfashion.herokuapp.com)
+DEMO App: [qfashion.herokuapp.com](https://qfashion.herokuapp.com)
 
 ![demo app screenshot](./src/images/screenshot.png)
 
