@@ -275,14 +275,13 @@ ul {
 .nav-logo-container {
   font-size: 2rem;
   height: 2em;
-  margin: 0.5em auto;
-  margin-top: 1.5em;
+  margin: 0.75em auto;
   text-align: center;
   width: 8em;
 }
 
 .nav-logo {
-  object-fit: none;
+  object-fit: cover;
   object-position: 10% 50%;
 }
 
