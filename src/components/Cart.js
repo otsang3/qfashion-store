@@ -10,7 +10,7 @@ function Cart(props) {
     const { cart, removeFromCart } = globalContext;
     const [ discount, setDiscount ] = useState(0)
     const [ input, setInput ] = useState("")
-    const [ total, setTotal ] = useState(0)
+    const [ subTotal, setSubTotal ] = useState(0)
     const deliveryCharge = 5.99
 
     useEffect(() => {
@@ -18,7 +18,7 @@ function Cart(props) {
             const total = cart.reduce(function(runningTotal, item) {
                 return runningTotal + item.price
             }, 0)
-            setTotal(parseFloat(total.toFixed(2)))
+            setSubTotal(parseFloat(total.toFixed(2)))
         } 
     }, [cart])
 
@@ -28,7 +28,7 @@ function Cart(props) {
         event.preventDefault();
         if (discount === 0) {
             if (input.toUpperCase() === discountCode) {
-                setDiscount(10)
+                setDiscount((subTotal / 10))
             }
         }
     }
@@ -81,11 +81,11 @@ function Cart(props) {
                 </form>
                 <p className="cart-summary-display">
                     <span>Subtotal</span>
-                    <span>£{total}</span>
+                    <span>£{subTotal}</span>
                 </p>
                 <p className="cart-summary-display">
                     <span>Discount</span>
-                    <span>-£{discount}</span>
+                    <span>-£{discount.toFixed(2)}</span>
                 </p>
                 <p className="cart-summary-display">
                     <span>Delivery</span>
@@ -93,7 +93,7 @@ function Cart(props) {
                 </p>
                 <h3 className="cart-summary-display">
                     <span>Total</span>
-                    <span>£{(total + deliveryCharge - discount).toFixed(2)}</span>
+                    <span>£{(subTotal + deliveryCharge - discount).toFixed(2)}</span>
                 </h3>
                 <button className="checkout-btn">CONTINUE TO CHECKOUT</button>
                 <p style={{marginBottom: "1em"}}>We accept</p>

@@ -7,7 +7,6 @@ function MenWomenHome(props) {
 
     const globalContext = useContext(GlobalContext)
     const { storeData } = globalContext;
-    console.log(props.promo.imgUrl);
 
     return(
         <div className="front-page-container">
