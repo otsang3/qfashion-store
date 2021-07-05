@@ -1,32 +1,31 @@
-import React, { useContext } from 'react';
-import { GlobalContext } from './GlobalState';
+import React from 'react';
 import NotFoundPage from './NotFoundPage';
 import ProductDetail from './ProductDetail';
+import { useSelector } from 'react-redux';
 
 function ProductItem(props) {
-
-    const globalContext = useContext(GlobalContext);
-    const { storeData } = globalContext;
+    const storeData = useSelector((state) => state.productsData);
     const prodCategories = storeData[props.category];
-    const { match: {params}} = props.name;
+    const {
+        match: { params },
+    } = props.name;
 
     const renderItem = () => {
         for (let category in prodCategories) {
             if (category.toLowerCase() === params.name.toLowerCase()) {
                 for (let item of prodCategories[category]) {
-                    if (item.name.split(" ").join("-").toLowerCase() === params.product.toLowerCase())
-                    return <ProductDetail item={item}/>
+                    if (
+                        item.name.split(' ').join('-').toLowerCase() ===
+                        params.product.toLowerCase()
+                    )
+                        return <ProductDetail item={item} />;
                 }
-                return <NotFoundPage/>
+                return <NotFoundPage />;
             }
         }
-    }
+    };
 
-    return(
-        <div>
-            {renderItem()}
-        </div>
-    )
+    return <div>{renderItem()}</div>;
 }
 
 export default ProductItem;
